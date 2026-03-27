@@ -1,25 +1,20 @@
-# --- DEPENDÊNCIAS ---
-# Nunca suba a pasta node_modules (ela é recriada com 'npm install')
+# Dependências (Pasta mais pesada, nunca deve subir)
 node_modules/
 
-# --- EXPO & BUILDS ---
-# Pastas geradas pelo Expo durante o desenvolvimento e build
+# Expo (Arquivos de cache e build local)
 .expo/
 dist/
 web-build/
 
-# --- LOGS ---
-# Arquivos de erro gerados pelo instalador de pacotes
+# Logs de erro
 npm-debug.log*
 yarn-debug.log*
 yarn-error.log*
 
-# --- SISTEMA ---
-# Arquivos que o Windows e o Mac criam sozinhos nas pastas
-.DS_Store
-Thumbs.db
+# Android e iOS (Pastas geradas apenas em builds nativos)
+android/
+ios/
 
-# --- CONFIGURAÇÕES DE IDE ---
-# Configurações pessoais do seu VS Code
-.vscode/
-.history/
+# Variáveis de ambiente (Segurança)
+.env
+.env.localp
