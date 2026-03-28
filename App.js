@@ -1,17 +1,17 @@
 import React from 'react';
 import { NavigationContainer } from '@react-navigation/native';
 import { createStackNavigator } from '@react-navigation/stack';
-import HomeScreen from './screens/HomeScreen'; 
+import HomeScreen from './screens/HomeScreen';
 import ListScreen from './screens/ListScreen';
 import DetailScreen from './screens/DetailScreen';
 import ProfileScreen from './screens/ProfileScreen';
+import CartScreen from './screens/CartScreen';
 
 const Stack = createStackNavigator();
 
 export default function App() {
   return (
-    <NavigationContainer> {}
-      
+    <NavigationContainer>
       <Stack.Navigator 
         initialRouteName="Home"
         screenOptions={{
@@ -20,18 +20,16 @@ export default function App() {
           headerTitleStyle: { fontWeight: 'bold' },
         }}
       >
-        {}
-        
         <Stack.Screen 
-          name="Home"
-          component={HomeScreen}
-          options={{ title: 'Aloha Surf' }}p
+          name="Home" 
+          component={HomeScreen} 
+          options={{ title: 'Aloha Surf Store - Onde as melhores ondas começam.' }} 
         />
 
         <Stack.Screen 
           name="List" 
           component={ListScreen} 
-          options={{ title: 'Nossas Pranchas' }} 
+          options={{ title: 'Nossos produtos' }} 
         />
 
         <Stack.Screen 
@@ -45,7 +43,11 @@ export default function App() {
           component={ProfileScreen} 
           options={{ title: 'Meu Perfil' }} 
         />
-
+        <Stack.Screen 
+          name="Cart" 
+          component={CartScreen} 
+          options={{ title: 'Meu Carrinho' }} 
+        />
       </Stack.Navigator>
     </NavigationContainer>
   );
